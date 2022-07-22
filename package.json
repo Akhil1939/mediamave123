@@ -8,6 +8,10 @@
     "server": "node app.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
+  "engines": {
+    "node": "16.4.0"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
