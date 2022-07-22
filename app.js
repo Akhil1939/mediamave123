@@ -14,16 +14,6 @@ app.use(cookieParser())
 app.use(require('./router/auth')); 
 
 const PORT = process.env.PORT  || 3030;
-
-// middleware()
-
-// app.get("/", (req, res) => { 
-//   // res.send("HOME"); 
-// });
-app.get("/login", (req, res) => {
-  res.send("login"); 
-});
-
 if ( process.env.NODE_ENV == "production"){
 
   app.use(express.static("ui/build"));
@@ -32,7 +22,7 @@ if ( process.env.NODE_ENV == "production"){
 
   app.get("*", (req, res) => {
 
-      res.sendFile(path.resolve(__dirname, 'ui', 'build', 'index.js'));
+      res.sendFile(path.resolve(__dirname, 'ui', 'build', 'index.html'));
 
   })
 
