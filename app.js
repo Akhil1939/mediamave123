@@ -18,7 +18,7 @@ const PORT = process.env.PORT  || 3030;
 // middleware()
 
 app.get("/", (req, res) => { 
-  res.send("HOME"); 
+  // res.send("HOME"); 
 });
 app.get("/login", (req, res) => {
   res.send("login"); 
